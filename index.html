@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stephen Hawking Estate</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topbar {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      width: 100%;
+      min-height: 76px;
+      padding: 20px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    nav a:hover { opacity: .65; }
+
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      isolation: isolate;
+      background: #000;
+    }
+
+    .hero video {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background:
+        linear-gradient(90deg, #0008, transparent 85%),
+        linear-gradient(0deg, #0009, transparent 55%);
+    }
+
+    .hero-content {
+      padding: 70px 8% 90px;
+      max-width: 850px;
+    }
+
+    .eyebrow { font-size: 12px; margin-bottom: 20px; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(48px, 8vw, 100px);
+      line-height: .98;
+      letter-spacing: -.05em;
+      font-weight: 400;
+    }
+
+    h1 strong { font-weight: 700; }
+
+    .description {
+      max-width: 390px;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 24px 0;
+    }
+
+    .discover {
+      display: inline-block;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #aaa;
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .news {
+      background: white;
+      color: #111;
+      padding: 75px 8%;
+    }
+
+    .news h2 {
+      font-size: clamp(36px, 5vw, 55px);
+      font-weight: 400;
+      margin: 0 0 35px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .news-card {
+      padding: 24px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .news-card small { color: #666; }
+    .news-card h3 {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    .news-card a {
+      color: #111;
+      font-size: 12px;
+      text-decoration: none;
+      border-bottom: 1px solid #aaa;
+      padding-bottom: 6px;
+    }
+
+    .quote {
+      background: #eee;
+      color: #111;
+      padding: 65px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .quote h2 {
+      font-size: clamp(48px, 8vw, 90px);
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .quote p {
+      max-width: 330px;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #000;
+      padding: 30px 5%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 11px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    @media (max-width: 800px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      nav { gap: 14px; }
+      .hero-content { padding: 60px 7% 80px; }
+      .news-grid { grid-template-columns: 1fr; }
+      .quote { align-items: flex-start; flex-direction: column; }
+      footer { flex-direction: column; }
+      footer a { margin: 0 15px 0 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">STEPHEN HAWKING ESTATE</a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#stephen">Stephen Hawking</a>
+      <a href="#news">In Print</a>
+      <a href="#news">On Screen</a>
+      <a href="#news">In Words</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <video autoplay muted loop playsinline preload="auto"
+             aria-label="Background video">
+        <source src="curious.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+      </video>
+
+      <div class="hero-content" id="stephen">
+        <p class="eyebrow">The official website of</p>
+        <h1>Stephen <strong>Hawking</strong></h1>
+        <p class="description">
+          Physicist. Cosmologist. Author. A life spent exploring
+          the biggest questions in the universe.
+        </p>
+        <a class="discover" href="#news">Discover his world ↗</a>
+      </div>
+    </section>
+
+    <section class="news" id="news">
+      <h2>News</h2>
+      <div class="news-grid">
+        <article class="news-card">
+          <small>Research &amp; discovery</small>
+          <h3>Exploring the mysteries of the universe</h3>
+          <a href="https://www.hawking.org.uk/">Read more ↗</a>
+        </article>
+        <article class="news-card">
+          <small>Books &amp; ideas</small>
+          <h3>Discover Stephen Hawking's books and ideas</h3>
+          <a href="https://www.hawking.org.uk/">Read more ↗</a>
+        </article>
+        <article class="news-card">
+          <small>Legacy</small>
+          <h3>A lasting legacy in science and cosmology</h3>
+          <a href="https://www.hawking.org.uk/">Read more ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="quote">
+      <h2>Look Up.</h2>
+      <p>
+        “Remember to look up at the stars and not down at your feet.”
+        <br><br>— Stephen Hawking
+      </p>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <span>© Stephen Hawking Estate</span>
+    <div>
+      <a href="#footer">Privacy Policy</a>
+      <a href="#footer">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
